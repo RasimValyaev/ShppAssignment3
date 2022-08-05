@@ -9,7 +9,6 @@ public class Assignment3Part2 extends TextProgram {
     public void run() {
         ControlEnteredNumber();
         comToOne();
-        System.out.println("Finish");
     }
 
     // the program works when the number > 0
@@ -26,6 +25,7 @@ public class Assignment3Part2 extends TextProgram {
         while (enteredNumber != 1){
             enteredNumber = getNumber(enteredNumber);
         }
+        System.out.println("Finish");
     }
 
     // by even/odd numbers - makes calculations
