@@ -2,6 +2,13 @@ package com.shpp.p2p.cs.rvalyaev.assignment3;
 
 import com.shpp.cs.a.console.TextProgram;
 
+/**
+ * Отже, вам потрібно написати програму, яка зчитує у користувача число і видає схоже на це:
+ * Enter a number: 17
+ * 17 is odd so I make 3n + 1: 52
+ * 52 is even so I take half: 26
+ */
+
 public class Assignment3Part2 extends TextProgram {
 
     private int enteredNumber;

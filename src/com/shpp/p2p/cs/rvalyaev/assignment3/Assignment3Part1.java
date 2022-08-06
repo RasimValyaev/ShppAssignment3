@@ -2,6 +2,30 @@ package com.shpp.p2p.cs.rvalyaev.assignment3;
 
 import com.shpp.cs.a.console.TextProgram;
 
+/**
+ *
+ *
+ * Ваше завдання: написати програму, яка запитує у користувача кількість хвилин,
+ * потрачених останні сім днів на вправи, і відповідно, репортить наступне:
+ *
+ * чи було достатньо часу приділено вправам для кардіоваскулярного здоров’я, і, якщо ні,
+ * виводить: скільки днів правильного життя (с заняттями більше 30 хвилин) не вистачає для рекомендованого графіку.
+ *
+ * чи було достатньо вправ для зменшення кров’яного тиску і холестерину, і, якщо ні,
+ * виводить: скільки днів користувач не дотягнув з заняттями по 40 хвилин на день.
+ * How many minutes did you do on day 1? 40
+ * How many minutes did you do on day 2? 30
+ * ...
+ * Cardiovascular health:
+ *   Great job! You've done enough exercise for cardiovascular health.
+ * Blood pressure:
+ *   You needed to train hard for at least 1 more day(s) a week!
+ * Cardiovascular health:
+ *   You needed to train hard for at least 2 more day(s) a week!
+ * Blood pressure:
+ *   Great job! You've done enough exercise to keep a low blood pressure.
+ */
+
 public class Assignment3Part1 extends TextProgram {
     // minutes of aerobic exercise
     private final int TOTAL_TRAININGS_MINITES = readInt("How many minutes have you worked out in the last 7 days: ");
