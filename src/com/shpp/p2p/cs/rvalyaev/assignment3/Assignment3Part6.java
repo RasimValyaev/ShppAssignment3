@@ -1,11 +1,5 @@
 package com.shpp.p2p.cs.rvalyaev.assignment3;
 
-import com.shpp.cs.a.graphics.WindowProgram;
-import com.shpp.p2p.cs.rvalyaev.assignment3.Assignment3Part4.*;
-
-import java.util.Timer;
-import java.util.concurrent.TimeUnit;
-
 /**
  * Частина 6 — П’ять секунд слави
  * Ми, можливо, ще не розглядали анімації, але скоро розглянемо.
@@ -21,10 +15,13 @@ import java.util.concurrent.TimeUnit;
 public class Assignment3Part6 extends Assignment3Part4 {
 
     public void run() {
+        christmasTree();
+    }
 
-        System.out.println(System.currentTimeMillis());
-        while (System.currentTimeMillis() < 5000) {
-            System.out.println(1);
+    //The christmasTree method, which emulates a Christmas tree, is called in a loop
+    public void christmasTree(){
+        long currentMilliSec = System.currentTimeMillis() + 5000;
+        while (System.currentTimeMillis() < currentMilliSec) {
             createPyramid();
         }
     }

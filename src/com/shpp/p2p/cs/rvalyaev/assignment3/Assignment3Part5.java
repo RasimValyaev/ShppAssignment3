@@ -1,6 +1,6 @@
 package com.shpp.p2p.cs.rvalyaev.assignment3;
 
-import com.shpp.cs.a.graphics.WindowProgram;
+import com.shpp.cs.a.console.TextProgram;
 
 import java.util.Random;
 /**
@@ -13,7 +13,7 @@ import java.util.Random;
  * Якщо у щасливчика в результаті менше ніж $20, то гра повторюється.
  */
 
-public class Assignment3Part5 extends WindowProgram {
+public class Assignment3Part5 extends TextProgram {
 
     @Override
     public void run() {
@@ -32,7 +32,8 @@ public class Assignment3Part5 extends WindowProgram {
             while (isEagle == random.nextBoolean()) {
                 money *= 2;
             }
+            System.out.println("This game, you earned " + gameCycle);
         }
-        System.out.println("gameCycle: " + gameCycle + "; sum: " + money);
+        System.out.println("Your total is $" + money);
     }
 }
