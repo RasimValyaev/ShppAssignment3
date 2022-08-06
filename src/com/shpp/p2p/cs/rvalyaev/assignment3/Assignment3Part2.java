@@ -19,17 +19,17 @@ public class Assignment3Part2 extends TextProgram {
     }
 
     // the program works when the number > 0
-    public void ControlEnteredNumber(){
-        enteredNumber = readInt("Enter a number: > 0 ");
-        while (enteredNumber < 1){
+    public void ControlEnteredNumber() {
+        enteredNumber = readInt("Enter a number: > 0 and <= " + (Integer.MAX_VALUE / 2 - 1) + ": ");
+        while ((enteredNumber < 1) || (enteredNumber > (Integer.MAX_VALUE / 2 - 1))) {
             System.out.println("enter the number > 0");
             enteredNumber = readInt("Enter a number: ");
         }
     }
 
     // loop call the method until the result = 1
-    private void comToOne(){
-        while (enteredNumber != 1){
+    private void comToOne() {
+        while (enteredNumber != 1) {
             enteredNumber = getNumber(enteredNumber);
         }
         System.out.println("Finish");
@@ -41,9 +41,9 @@ public class Assignment3Part2 extends TextProgram {
         if ((number % 2) != 0) {
             result = (number * 3) + 1;
             System.out.println(number + " is odd so I make 3n + 1: " + result);
-        }else{
+        } else {
             result = number / 2;
-            System.out.println(number +  " is even so I take half: " + result);
+            System.out.println(number + " is even so I take half: " + result);
         }
         return result;
     }

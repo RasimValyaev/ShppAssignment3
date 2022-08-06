@@ -15,17 +15,19 @@ import java.awt.*;
  */
 
 public class Assignment3Part4 extends WindowProgram {
-    private final int BRICK_HEIGHT = 70;
+    private final int BRICK_HEIGHT = 30;
     private final int BRICK_WIDTH = 50;
-    private final int BRICKS_IN_BASE = 5;
+    private final int BRICKS_IN_BASE = 10;
 
     @Override
     public void run() {
         controlWidth();
-        genereteBrick();
+        createPyramid();
     }
 
-    private void genereteBrick() {
+    // create pyramid. rows count = BRICKS_IN_BASE
+    // brick width and height are constants
+    public void createPyramid() {
         int rowNumber = 0;
         int breaksLocationX;
         int breaksLocationY;
