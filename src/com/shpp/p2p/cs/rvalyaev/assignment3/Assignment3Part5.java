@@ -25,15 +25,15 @@ public class Assignment3Part5 extends TextProgram {
         boolean isEagle = true;
         Random random = new Random();
         int money = sumMoney;
-        int gameCycle = 0;
+        int totalMoney = 0;
         while (money < 21) {
-            gameCycle++;
             money = sumMoney;
             while (isEagle == random.nextBoolean()) {
+                System.out.println("This game, you earned $" + money);
+                totalMoney += money;
+                System.out.println("Your total is $" + totalMoney);
                 money *= 2;
             }
-            System.out.println("This game, you earned " + gameCycle);
         }
-        System.out.println("Your total is $" + money);
     }
 }
