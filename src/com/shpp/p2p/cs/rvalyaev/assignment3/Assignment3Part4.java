@@ -17,32 +17,34 @@ import java.awt.*;
 public class Assignment3Part4 extends WindowProgram {
     private final int BRICK_HEIGHT = 30;
     private final int BRICK_WIDTH = 50;
-    private final int BRICKS_IN_BASE = 10;
+    public final int BRICKS_IN_BASE = 10;
 
     @Override
     public void run() {
+        int bricksCount = BRICKS_IN_BASE;
         controlWidth();
-        createPyramid();
+        createPyramid(bricksCount);
     }
 
     // create pyramid. rows count = BRICKS_IN_BASE
     // brick width and height are constants
-    public void createPyramid() {
+    // this method is also used in the 6th task
+    public void createPyramid(int bricksCount) {
         int rowNumber = 0;
         int breaksLocationX;
         int breaksLocationY;
 
-        while (rowNumber < BRICKS_IN_BASE) {
-            breaksLocationX = getLocationX(BRICKS_IN_BASE - rowNumber);
+        while (rowNumber < bricksCount) {
+            breaksLocationX = getLocationX(bricksCount - rowNumber);
             breaksLocationY = getLocationY(rowNumber + 1);
-            cycleToRows(BRICKS_IN_BASE - rowNumber, breaksLocationX, breaksLocationY);
+            cycleToRows(bricksCount - rowNumber, breaksLocationX, breaksLocationY);
             rowNumber++;
         }
     }
 
     // check that the screen size is larger than the image size
-    public void controlWidth(){
-        if ((getWidth() < (BRICK_WIDTH*BRICKS_IN_BASE)) || (getHeight() < (BRICK_HEIGHT * BRICKS_IN_BASE))){
+    public void controlWidth() {
+        if ((getWidth() < (BRICK_WIDTH * BRICKS_IN_BASE)) || (getHeight() < (BRICK_HEIGHT * BRICKS_IN_BASE))) {
             System.out.println("screen size is smaller than picture size");
             System.exit(0);
         }

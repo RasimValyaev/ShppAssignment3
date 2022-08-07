@@ -19,10 +19,12 @@ public class Assignment3Part6 extends Assignment3Part4 {
     }
 
     //The christmasTree method, which emulates a Christmas tree, is called in a loop
-    public void christmasTree(){
+    public void christmasTree() {
         long currentMilliSec = System.currentTimeMillis() + 5000;
+        int bricksCount = 1;
         while (System.currentTimeMillis() < currentMilliSec) {
-            createPyramid();
+            createPyramid(bricksCount++ % 10);
+            pause(100);
         }
     }
 }
