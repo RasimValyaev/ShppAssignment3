@@ -3,7 +3,7 @@ package com.shpp.p2p.cs.rvalyaev.assignment3;
 import com.shpp.cs.a.console.TextProgram;
 
 /**
- *
+ * comments cyr: <a href="https://discord.com/channels/534496884849639455/634339132386312212/1004817047630385182">...</a>
  *
  * Ваше завдання: написати програму, яка запитує у користувача кількість хвилин,
  * потрачених останні сім днів на вправи, і відповідно, репортить наступне:
@@ -28,7 +28,7 @@ import com.shpp.cs.a.console.TextProgram;
 
 public class Assignment3Part1 extends TextProgram {
     // minutes of aerobic exercise
-    private final int TOTAL_TRAININGS_MINITES = readInt("How many minutes have you worked out in the last 7 days: ");
+    private int totalTrainingsMinutes;
 
     @Override
     public void run() {
@@ -42,23 +42,24 @@ public class Assignment3Part1 extends TextProgram {
         // Blood pressure, rate of minutes per day
         final int MINUTE_PRESSURE = 40;
 
-        incompletePeriod(DAYS_FOR_CARDIOVASCULAR, MINUTES_FOR_CARDIOVASCULAR, true);
         controlMinutesForNegative();
+        incompletePeriod(DAYS_FOR_CARDIOVASCULAR, MINUTES_FOR_CARDIOVASCULAR, true);
         incompletePeriod(DAYS_PRESSURE, MINUTE_PRESSURE, false);
     }
 
     // if enter minutes is negative - exit program
     private void controlMinutesForNegative() {
-        if (TOTAL_TRAININGS_MINITES < 0) {
+        totalTrainingsMinutes = readInt("How many minutes have you worked out in the last 7 days: ");
+        while (totalTrainingsMinutes < 0) {
             System.out.println("number of days must be positive!");
-            System.exit(0); // program exit
+            totalTrainingsMinutes = readInt("How many minutes have you worked out in the last 7 days: ");
         }
     }
 
     /* training comments. output recommendations depending on the number of minutes of training*/
     private void incompletePeriod(int amountDaysNorm, int amountMinutesNorm, boolean isCardiovascular) {
         int countFullMinutesNorm = amountDaysNorm * amountMinutesNorm; //how minutes need
-        int incompleteMinutes = countFullMinutesNorm - TOTAL_TRAININGS_MINITES; //How many minutes are missing
+        int incompleteMinutes = countFullMinutesNorm - totalTrainingsMinutes; //How many minutes are missing
         int incompleteDays = incompleteMinutes / amountMinutesNorm; //How many days are missing
         int incompleteMinuteOneDay = incompleteMinutes % amountMinutesNorm;
         int numberDay = 0;

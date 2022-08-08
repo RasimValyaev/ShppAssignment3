@@ -3,6 +3,8 @@ package com.shpp.p2p.cs.rvalyaev.assignment3;
 import com.shpp.cs.a.console.TextProgram;
 
 /**
+ * comments cyr: <a href="https://discord.com/channels/534496884849639455/634339132386312212/1004817047630385182">...</a>
+ *
  * Частина 3 — Піднесення до степеня
  * Ваше завдання — написати метод:
  * private double raiseToPower(double base, int exponent)

@@ -3,6 +3,7 @@ package com.shpp.p2p.cs.rvalyaev.assignment3;
 import com.shpp.cs.a.console.TextProgram;
 
 import java.util.Random;
+
 /**
  * Це гіпотетична гра для казино з простою ідеологією.
  * Грають дві людини: щасливчик і спітнілий.
