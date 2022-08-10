@@ -18,23 +18,24 @@ public class Assignment3Part5 extends TextProgram {
 
     @Override
     public void run() {
-        final int INPUT_SUM = readInt("the amount of your wager: ");
-        petersburgParadox(INPUT_SUM);
+        petersburgParadox();
     }
 
-    private void petersburgParadox(int sumMoney) {
+    private void petersburgParadox() {
         boolean isEagle = true;
         Random random = new Random();
-        int money = sumMoney;
         int totalMoney = 0;
-        while (money < 21) {
-            money = sumMoney;
+        int countGames = 0;
+        while (totalMoney <= 20) {
+            int money = 1;
             while (isEagle == random.nextBoolean()) {
-                System.out.println("This game, you earned $" + money);
+                countGames++;
+                println("This game, you earned $" + money);
                 totalMoney += money;
-                System.out.println("Your total is $" + totalMoney);
+                println("Your total is $" + totalMoney);
                 money *= 2;
             }
         }
+        print("It took " + countGames + " games to earn $20");
     }
 }

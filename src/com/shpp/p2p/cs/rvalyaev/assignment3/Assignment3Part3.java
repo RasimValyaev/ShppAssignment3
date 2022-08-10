@@ -29,23 +29,21 @@ public class Assignment3Part3 extends TextProgram {
 
     // Raise number base to power exponent.
     private double raiseToPower(double base, int exponent) {
-        double result = base;
-        int exponentNew = exponent;
-
+        double result;
         //the power(exponent) of the number must be positive
-        if (exponentNew == 0) {
+        if (exponent == 0) {
             return 1;
-        } else if (exponentNew < 0) {
-            exponentNew *= -1;
+        } else if (exponent < 0) {
+            base = 1 / base;
+            exponent *= -1;
         }
 
-        for (int i = 0; i < exponentNew - 1; i++) {
+        result = base;
+
+        for (int i = 0; i < exponent - 1; i++) {
             result *= base;
         }
 
-        if (exponent < 0) {
-            result = 1 / result;
-        }
         return result;
     }
 

@@ -22,7 +22,7 @@ public class Assignment3Part6 extends Assignment3Part4 {
     public void christmasTree() {
         long currentMilliSec = System.currentTimeMillis() + 5000;
         int bricksCount = 1;
-        while (System.currentTimeMillis() < currentMilliSec) {
+        while (System.currentTimeMillis() <= currentMilliSec) {
             createPyramid(bricksCount++ % 10);
             pause(100);
         }
