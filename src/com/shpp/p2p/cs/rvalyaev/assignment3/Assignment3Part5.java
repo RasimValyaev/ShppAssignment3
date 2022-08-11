@@ -22,11 +22,12 @@ public class Assignment3Part5 extends TextProgram {
     }
 
     private void petersburgParadox() {
-        boolean isEagle = true;
-        Random random = new Random();
+        int money;
         int totalMoney = 0;
         int countGames = 0;
-        int money;
+        boolean isEagle = true;
+        Random random = new Random();
+
         while (totalMoney < 20) {
             money = 1;
             countGames++;
