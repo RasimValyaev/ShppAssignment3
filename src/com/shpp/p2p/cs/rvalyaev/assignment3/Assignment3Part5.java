@@ -26,15 +26,16 @@ public class Assignment3Part5 extends TextProgram {
         Random random = new Random();
         int totalMoney = 0;
         int countGames = 0;
-        while (totalMoney <= 20) {
-            int money = 1;
+        int money;
+        while (totalMoney < 20) {
+            money = 1;
+            countGames++;
             while (isEagle == random.nextBoolean()) {
-                countGames++;
-                println("This game, you earned $" + money);
-                totalMoney += money;
-                println("Your total is $" + totalMoney);
                 money *= 2;
             }
+            totalMoney = totalMoney + money;
+            println("This game, you earned $" + money);
+            println("Your total is $" + totalMoney);
         }
         print("It took " + countGames + " games to earn $20");
     }

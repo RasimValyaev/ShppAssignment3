@@ -17,7 +17,7 @@ import java.awt.*;
 public class Assignment3Part4 extends WindowProgram {
     private final int BRICK_HEIGHT = 30;
     private final int BRICK_WIDTH = 50;
-    public final int BRICKS_IN_BASE = 10;
+    public final int BRICKS_IN_BASE = 12;
 
     @Override
     public void run() {
