@@ -21,22 +21,23 @@ public class Assignment3Part5 extends TextProgram {
         petersburgParadox();
     }
 
+    // The game continues until heads come up and ends when 20 is reached.
     private void petersburgParadox() {
-        int money;
-        int totalMoney = 0;
+        int sumMoneyEagle;
+        int sumMoneyGame = 0;
         int countGames = 0;
         boolean isEagle = true;
         Random random = new Random();
 
-        while (totalMoney < 20) {
-            money = 1;
+        while (sumMoneyGame < 20) {
+            sumMoneyEagle = 1;
             countGames++;
             while (isEagle == random.nextBoolean()) {
-                money *= 2;
+                sumMoneyEagle *= 2;
             }
-            totalMoney = totalMoney + money;
-            println("This game, you earned $" + money);
-            println("Your total is $" + totalMoney);
+            sumMoneyGame = sumMoneyGame + sumMoneyEagle;
+            println("This game, you earned $" + sumMoneyEagle);
+            println("Your total is $" + sumMoneyGame);
         }
         print("It took " + countGames + " games to earn $20");
     }
